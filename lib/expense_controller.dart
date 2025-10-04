@@ -22,7 +22,7 @@ class ExpenseController {
     ExpenseStorage.saveExpenses(expenses);
   }
 
-  // ✅ New method for editing
+  // New method for editing
   void editExpense(int index, String title, double amount, String category) {
     expenses[index] = {
       'title': title,
