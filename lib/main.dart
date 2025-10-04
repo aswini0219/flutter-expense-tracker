@@ -135,7 +135,7 @@ class _ExpenseHomeScreenState extends State<ExpenseHomeScreen> {
           : ListView(
         padding: EdgeInsets.all(8),
         children: [
-          // ✅ Total expenses
+          // Total expenses
           Container(
             padding: EdgeInsets.all(16),
             color: Colors.teal.shade50,
@@ -145,11 +145,11 @@ class _ExpenseHomeScreenState extends State<ExpenseHomeScreen> {
             ),
           ),
 
-          // ✅ Pie Chart (with % and legend from separate file)
+          // Pie Chart (with % and legend from separate file)
           ExpenseChart(categoryTotals: _controller.categoryTotals),
 
           const SizedBox(height: 20),
-          // ✅ Expense list
+          // Expense list
           ...expenses.map((expense) {
             int index = expenses.indexOf(expense);
             return Card(
