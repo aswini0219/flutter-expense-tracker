@@ -20,14 +20,14 @@ class ExpenseChart extends StatelessWidget {
       return Center(child: Text("No data for chart"));
     }
 
-    // ✅ Calculate total for percentages
+    // Calculate total for percentages
     final total = categoryTotals.values.fold(0.0, (a, b) => a + b);
 
     final sections = categoryTotals.entries.map((entry) {
       final percent = (entry.value / total * 100).toStringAsFixed(1);
       return PieChartSectionData(
         value: entry.value,
-        title: "$percent%", // ✅ Show percentage inside
+        title: "$percent%", // Show percentage inside
         titleStyle: TextStyle(
           fontSize: 12,
           fontWeight: FontWeight.bold,
@@ -52,7 +52,7 @@ class ExpenseChart extends StatelessWidget {
         ),
         const SizedBox(height: 16),
 
-        // ✅ Legend
+        // Legend
         Wrap(
           spacing: 12,
           runSpacing: 8,
